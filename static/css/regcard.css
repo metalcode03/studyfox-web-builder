@@ -1,0 +1,116 @@
+.main-card {
+    height: 35.5em;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(155, 155, 155, 0.522);
+    padding-top: 30px;
+}
+
+.card-head-text {
+    background: white;
+    border: none;
+    padding-left: 20em;
+}
+
+.input-form {
+    background: rgba(240, 240, 240, 0.398);
+    padding: 5px;
+    border-radius: 25px;
+    padding-left: 5px;
+}
+
+.paddings {
+    padding-right: 10em;
+    padding-left: 10em;
+}
+
+.btn-register {
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 1199px) {
+    .card-head-text {
+        padding-left: 17em;
+    }
+}
+
+@media (max-width: 991px) {
+    .card-head-text {
+        padding-left: 12em;
+    }
+
+    .paddings {
+        padding-right: 6em;
+        padding-left: 6em;
+    }
+}
+
+@media (max-width: 767px) {
+    .card-head-text h1 {
+        font-size: 30px;
+    }
+
+    .paddings {
+        padding-right: 5em;
+        padding-left: 5em;
+    }
+}
+
+@media (max-width: 500px) {
+    .card-head-text h1 {
+        font-size: 25px;
+    }
+
+    .paddings {
+        padding-right: 4em;
+        padding-left: 4em;
+    }
+}
+
+@media(max-width: 470px) {
+    .card-head-text {
+        padding-left: 7em;
+    }
+
+    .paddings {
+        padding-right: 3em;
+        padding-left: 3em;
+    }
+}
+
+@media(max-width: 375px) {
+    .paddings {
+        padding-right: 2em;
+        padding-left: 2em;
+    }
+}
+
+@media (max-width: 320px) {
+    .card-head-text h1 {
+        font-size: 20px;
+    }
+
+    .paddings {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+}
+
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+
+}
+
+.iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}

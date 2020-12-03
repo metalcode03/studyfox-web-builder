@@ -1,0 +1,37 @@
+{% extends "registrations/base.html" %}
+{% load static %}
+
+{% block regbody %}
+<!-- reg area -->
+<section class="brands-area">
+    <div class="container">
+        <div class="row fullscreen align-items-center justify-content-center">
+            <div class="card col-md-8 col-11 main-card">
+                <div class="card-header align-content-center justify-content-center card-head-text">
+                    <h1>Log In</h1>
+                </div>
+                <div class="justify-content-center align-items-center paddings">
+                    <form method="POST" style="margin-top: 7em;">
+                        {% csrf_token %}
+                        <div class="mt-10 form-group">
+                            <input type="text" id="id_query" name="query" placeholder="Username"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'" required
+                                class="single-input form-control input-form">
+                        </div>
+                        <div class="mt-10 form-group">
+                            <input type="password" id="id_password" name="password" placeholder="Password"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" required
+                                class="single-input form-control input-form">
+                        </div>
+                        <div class="mt-10 form-group">
+
+                            <button type="submit" class="btn btn-dark col-12 btn-register">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock regbody %}

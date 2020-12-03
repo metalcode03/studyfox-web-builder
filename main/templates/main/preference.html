@@ -1,0 +1,62 @@
+{% extends "bases/basic.html" %}
+{% load static %}
+
+{% block style %}
+<style>
+    .btn-hover:hover {
+        background: linear-gradient(50deg, #8490ff 0%, #62bdfc 70%);
+        border: 1px solid #62bdfc;
+        box-shadow: 0px 3px 10px #8490ff72;
+    }
+</style>
+{% endblock style %}
+
+{% block mainbody %}
+<section class="top-category-widget-area pt-90 pb-90 section-full">
+    <div class="container" style="padding-top: 3em;">
+        <div class="row justify-content-center mb-5 pb-5">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <span class="subheading text-uppercase">Preference</span>
+                <h2>Choose Registration</h2>
+                <!-- <p>Find out new responsive and beautiful web template, and add them to your website.</p> -->
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="mr-20 mt-20">
+                <div class="col-12">
+                    <div class="card" style="box-shadow: 0px 3px 10px rgba(163, 163, 163, 0.419); padding: 20px; border-radius:25px;
+                    border: none;">
+                        <div class="card-body" style=" padding-left:200px; padding-top:30px;">
+                        </div>
+                        <a href="" class="btn btn-generic btn-outline-primary btn-hover"
+                            style=" padding-top: 30px; padding-bottom:30px; border-radius: 25px;">Student</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mr-20 mt-20">
+                <div class="col-12">
+                    <div class="card" style="box-shadow: 0px 3px 10px rgba(163, 163, 163, 0.419); padding: 20px; border-radius:25px;
+                    border: none;">
+                        <div class="card-body" style=" padding-left:200px; padding-top:30px;">
+                        </div>
+                        <a href="" class="btn btn-generic btn-outline-primary btn-hover"
+                            style=" padding-top: 30px; padding-bottom:30px; border-radius: 25px;">Teacher</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mr-20 mt-20">
+                <div class="col-12">
+                    <div class="card" style="box-shadow: 0px 3px 10px rgba(163, 163, 163, 0.419); padding: 20px; border-radius:25px;
+                    border: none;">
+                        <div class="card-body" style=" padding-left:200px; padding-top:30px;">
+                        </div>
+                        <a href="" class="btn btn-generic btn-outline-primary btn-hover"
+                            style=" padding-top: 30px; padding-bottom:30px; border-radius: 25px;">School</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock mainbody %}

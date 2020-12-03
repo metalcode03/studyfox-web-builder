@@ -1,0 +1,42 @@
+{% load static %}
+
+		  <header id="header">
+		      <div class="container main-menu">
+		          <div class="row align-items-center justify-content-between d-flex">
+		              <div id="logo">
+		                  <a href="{% url 'main:index' %}"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>
+		              </div>
+		              <nav id="nav-menu-container">
+		                  <ul class="nav-menu">
+		                      <li><a href="index.html">Home</a></li>
+		                      <li><a href="about.html">About</a></li>
+		                      <li><a href="services.html">Services</a></li>
+		                      <li><a href="price.html">Pricing</a></li>
+		                      <li class="menu-has-children"><a href="">Blog</a>
+		                          <ul>
+		                              <li><a href="blog-home.html">Blog Home</a></li>
+		                              <li><a href="blog-single.html">Blog Single</a></li>
+		                          </ul>
+		                      </li>
+		                      <li><a href="contact.html">Contact</a></li>
+		                      <li class="register-btn"><a href="{% url 'accounts:login' %}"
+		                              class="primary-btn text-uppercase"
+		                              style="border-radius: 25px; background:none; border:1px solid #8490ff; color:#8490ff; padding-right:25px; padding-left:25px;">Log
+		                              In</a></li>
+		                      <li class="register-btn"><a href="{% url 'accounts:signup' %}" class="primary-btn text-uppercase" style="border-radius: 25px; background:linear-gradient(50deg, #8490ff 0%, #62bdfc 70%); color:white;
+								padding-right:25px; padding-left:25px;">Sign Up</a></li>
+		                  </ul>
+		              </nav><!-- #nav-menu-container -->
+		              <nav id="nav-menu-container">
+		                  <ul class="nav-menu">
+		                      <li><a href="{% url 'accounts:login' %}" class="primary-btn text-uppercase"
+		                              style="border-radius: 25px; background:none; border:1px solid #8490ff; color:#8490ff; padding-right:25px; padding-left:25px;">Log
+		                              In</a></li>
+		                      <li><a href="{% url 'accounts:signup' %}" class="primary-btn text-uppercase"
+		                              style="border-radius: 25px; background:linear-gradient(50deg, #8490ff 0%, #62bdfc 70%); color:white;
+					padding-right:25px; padding-left:25px;">Sign Up</a></li>
+		                  </ul>
+		              </nav>
+		          </div>
+		      </div>
+		  </header><!-- #header -->

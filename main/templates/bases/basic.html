@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    {% include "bases/head.html" %}
+</head>
+{% block style %}
+{% endblock style %}
+
+<body>
+    {% include "bases/nav.html" %}
+    {% block mainbody %}
+
+    {% endblock mainbody %}
+    {% include "bases/footer2.html" %}
+    {% include "bases/scripts.html" %}
+</body>
+
+</html>
