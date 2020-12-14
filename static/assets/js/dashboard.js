@@ -27,7 +27,7 @@
 
       bar.animate(.65);  // Number from 0.0 to 1.0
       bar.path.style.strokeLinecap = 'round';
-      let linearGradient = '<defs><linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse"><stop offset="20%" stop-color="#da8cff"/><stop offset="50%" stop-color="#9a55ff"/></linearGradient></defs>';
+      let linearGradient = '<defs><linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse"><stop offset="20%" stop-color="#62bdfc"/><stop offset="50%" stop-color="#8490ff"/></linearGradient></defs>';
       bar.svg.insertAdjacentHTML('afterBegin', linearGradient);
     }
     if ($("#productSaleProgress").length) {

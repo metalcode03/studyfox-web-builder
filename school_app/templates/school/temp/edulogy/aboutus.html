@@ -1,0 +1,127 @@
+{% extends "edulogy/base/base.html" %}
+{% load static %}
+
+{% block mainbody %}
+        <section class="section lb p120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tagline-message page-title text-center">
+                            <h3>About Us</h3>
+                            <ul class="breadcrumb">
+                                <li><a href="javascript:void(0)">Home</a></li>
+                                <li class="active">About</li>
+                            </ul>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end section -->
+<section class="w3l-wecome-content-6">
+    <!-- /content-6-section -->
+    <div class="ab-content-6-mian py-5">
+        <div class="container py-lg-5">
+            <div class="welcome-grids row">
+                <div class="col-lg-6 mb-lg-0 mb-5">
+                    <!-- <h6>About Us</h6> -->
+                    <h3 style="font-weight: 700; font-size: 30px; line-height: 2;">
+                        {{about.subtitle}}
+                    </h3>
+                    
+                    <p class="my-4">{{about.about}}</p>
+                    <div class="button-4-pink">
+                        <div class="eff-4-pink"></div>
+                        <a href="services.html"> Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 welcome-image">
+                    <img src="{% static 'templates/edulogy/images/ab.jpg' %}" class="img-fluid" alt="" />
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- //content-6-section -->
+          <section class="section">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-4 hidden-sm hidden-xs">
+                          <div class="custom-module">
+                              <img src="{% static 'templates/edulogy/upload/device_01.png' %}" alt=""
+                                  class="img-responsive wow slideInLeft">
+                          </div><!-- end module -->
+                      </div><!-- end col -->
+                      <div class="col-md-8">
+                          <div class="custom-module p40l">
+                              <h2>{{personals.title}}</h2>
+
+                              <p>{{personals.description}}</p>
+
+                              <hr class="invis">
+
+                              <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 first">
+                                        <ul class="check">
+                                  {% for feature in singlefeature %}
+
+                                            <li>{{feature.feature}}</li>
+
+                                  {% endfor %}
+                                        </ul><!-- end check -->
+                                    </div>
+                              </div><!-- end row -->
+
+                              <hr class="invis">
+
+                              <div class="btn-wrapper">
+                                  <a href="#" class="btn btn-primary">Learn More About us</a>
+                              </div>
+
+                          </div><!-- end module -->
+                      </div><!-- end col -->
+                  </div><!-- end row -->
+              </div><!-- end container -->
+          </section>
+          <section class="section">
+              <div class="container">
+                  <div class="section-title text-center">
+                      <h3>Meet The Teachers</h3>
+                      <p>Maecenas sit amet tristique turpis. Quisque porttitor eros quis leo pulvinar, at hendrerit
+                          sapien iaculis. Donec consectetur accumsan arcu, sit amet fringilla ex ultricies.</p>
+                  </div><!-- end title -->
+
+                  <div class="row text-center">
+                      
+                      {% for teacher in schoolteacher %}
+                        <div class="col-md-4 col-sm-6">
+                            <div class="teammembers">
+                                <div class="entry">
+                                    <img src="{{teacher.image.url}}"
+                                        alt="" class="img-responsive">
+                                    <div class="magnifier">
+                                        <div class="visible-buttons1 teambuttons">
+                                            <p>We’re committed to work and give our student
+                                                best education and transform team future leaders.</p>
+                                            <div class="social-links">
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                                <a href="#"><i class="fa fa-skype"></i></a>
+                                            </div><!-- end social -->
+                                        </div>
+                                    </div>
+                                </div><!-- end box -->
+                                <div class="teamdesc">
+                                    <h4>{{teacher.name}}</h4>
+                                    <p>{{teacher.title}}</p>
+                                </div><!-- end teamdesc -->
+                            </div><!-- end teammembers -->
+                        </div><!-- end col -->
+                      {% endfor %}
+                          
+                  </div><!-- end row -->
+              </div><!-- end container -->
+          </section>
+{% endblock mainbody %}

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "school/temp/edulogy/base/head.html" %}
+</head>
+<body>
+    {% include "school/temp/edulogy/base/preloader.html" %}
+    <div class="wrapper">
+        {% include "school/temp/edulogy/base/modal_login.html" %}
+        {% if codex %}
+            {% include "school/temp/edulogy/base/navbar.html" %}
+        {% else %}
+            {% include "school/temp/edulogy/base/regular_nav.html" %}
+        {% endif %}
+        {% block mainbody %}
+          
+        {% endblock mainbody %}
+        {% include "school/temp/edulogy/base/footer.html" %}
+    </div>
+    {% include "school/temp/edulogy/base/scripts.html" %}
+</body>
+</html>

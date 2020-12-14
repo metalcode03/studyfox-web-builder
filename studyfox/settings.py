@@ -24,8 +24,11 @@ SECRET_KEY = 'zru*pax8ubj8x*$)ss(g5b=(f=i4)l^_pyz^eh4_3g#$hwt+^#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-ALLOWED_HOSTS = ['studyfoxx.com', '192.81.218.91', '.']
+# DEBUG = True
+if DEBUG:
+    ALLOWED_HOSTS = []
+else:
+    ALLOWED_HOSTS = ['studyfoxx.com', '192.81.218.91', '*']
 
 AUTH_USER_MODEL = 'accounts.User'
 

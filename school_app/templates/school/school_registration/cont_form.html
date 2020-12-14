@@ -1,0 +1,26 @@
+{% extends "bases/basic.html" %}
+{% load static %}
+
+{% block mainbody %}
+<section class="top-category-widget-area pt-90 pb-90" style="height: 46.9em;">
+    <div class="container" style="padding-top: 3em;">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-8 col-md-8">
+                <h3 class="mb-30">Tell Us About Your School</h3>
+                <small>This will be updated to your website</small>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mt-10">
+                        <textarea name="description" id="id_description" class="single-textarea"
+                            placeholder="About School" onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Message'" required></textarea>
+                    </div>
+                    <div class="input-group-icon mt-10">
+                        <button type="submit" class="genric-btn primary circle col-sm-12 col-lg-2">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock mainbody %}

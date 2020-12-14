@@ -46,7 +46,7 @@ danger: #fe7c96,
 light: #f8f9fa,
 dark: #3e4b5b);
 
-$theme-gradient-colors: (primary: linear-gradient(to right, #da8cff, #9a55ff),
+$theme-gradient-colors: (primary: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%),
 secondary: linear-gradient(to right, #e7ebf0, #868e96),
 success: linear-gradient(to right, #84d9d2, #07cdae),
 info: linear-gradient(to right, #90caf9, #047edf 99%),
@@ -59,7 +59,7 @@ dark: linear-gradient(89deg, #5e7188, #3e4b5b));
 ////////// COLOR SYSTEM //////////
 
 ////////// COLOR VARIABLES //////////
-$content-bg: #f2edf3;
+$content-bg: #f9f9ff;
 $footer-bg: $content-bg;
 $footer-color: color(dark);
 $border-color: #ebedf2;
@@ -85,7 +85,7 @@ reddit: #ff4500);
 $type-1: 'roboto',
 sans-serif;
 $type-2: $type-1;
-$type1-light: 'ubuntu-light',
+$type1-light: 'Poppins',
 sans-serif;
 $type1-regular: 'ubuntu-regular',
 sans-serif;
@@ -299,7 +299,7 @@ $chat-container-height:100%s;
 $text-gray:gray;
 $bullet-line-list-shape-bg: color(white) !default;
 $arrow-color: $white;
-$tab-head-bg: darken(#f2edf3, 2%);
+$tab-head-bg: darken(#f9f9ff, 2%);
 $accordian-shadow-color:rgba(230, 234, 236, 0.35);
 $landing-bg:#1a142dfa;
 $private-btn-bg:#eae2ec;
@@ -337,7 +337,7 @@ $sidebar-light-menu-hover-color: darken($sidebar-light-menu-color, 10%);
 $sidebar-light-submenu-hover-color: darken($sidebar-light-submenu-color, 20%);
 $sidebar-light-menu-icon-color: #bba8bff5;
 $sidebar-light-menu-arrow-color: #9e9da0;
-$sidebar-light-menu-border-color: #f2edf3;
+$sidebar-light-menu-border-color: #f9f9ff;
 
 $sidebar-menu-font-size: $default-font-size;
 $sidebar-menu-padding-y: 1.125rem;

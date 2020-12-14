@@ -4,12 +4,12 @@
 		      <div class="container main-menu">
 		          <div class="row align-items-center justify-content-between d-flex">
 		              <div id="logo">
-		                  <a href="{% url 'main:index' %}"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>
+		                  <a href="{% url 'main:index' %}"><img src="{% static 'img/logo.svg' %}" alt="" title="" /></a>
 		              </div>
 		              <nav id="nav-menu-container">
 		                  <ul class="nav-menu">
 		                      <li><a href="index.html">Home</a></li>
-		                      <li><a href="about.html">About</a></li>
+		                      <li><a href="{% url 'main:about' %}">About</a></li>
 		                      <li><a href="services.html">Services</a></li>
 		                      <li><a href="price.html">Pricing</a></li>
 		                      <li class="menu-has-children"><a href="">Blog</a>

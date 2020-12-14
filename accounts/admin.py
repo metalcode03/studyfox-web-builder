@@ -7,7 +7,6 @@ from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import (
     AdminPasswordChangeForm, UserChangeForm, UserCreationForm,
 )
-from django.contrib.auth.models import Group, User
 from django.core.exceptions import PermissionDenied
 from django.db import router, transaction
 from django.http import Http404, HttpResponseRedirect

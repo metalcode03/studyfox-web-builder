@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include 'school/school_admin/bases/head.html' %}
+
+<body>
+    <div class="container-scroller">
+        {% include 'school/school_admin/bases/navbar.html' %}
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            {% include "school/school_admin/bases/settings.html" %}
+            {% include "school/school_admin/bases/sidebar.html" %}
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper" style="background: #f9f9ff;">
+                    <i class="mdi mdi-nothing" id="bannerClose"></i>
+                    <div class="page-header">
+                        {% block breadcrumbs %}
+                          
+                        {% endblock breadcrumbs %}
+                    </div>
+                {% block mainbody %}
+
+                {% endblock mainbody %}
+                </div>
+                {% include "school/school_admin/bases/footer.html" %}
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    {% include "school/school_admin/bases/scripts.html" %}
+</body>
+
+</html>

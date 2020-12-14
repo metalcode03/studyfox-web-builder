@@ -4490,3 +4490,11 @@ dl.accordion.time-line:before {
 }
 
 /*-------- end footer Area -------------*/
+.file-upload-default {
+  visibility: hidden;
+  position: absolute;
+}
+
+.file-upload-info {
+  background: transparent;
+}

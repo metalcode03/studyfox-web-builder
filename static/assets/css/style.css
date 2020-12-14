@@ -4773,12 +4773,12 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: #f2edf3;
+  background-color: #f9f9ff;
 }
 
 .table-hover tbody tr:hover {
   color: #212529;
-  background-color: #f2edf3;
+  background-color: #f9f9ff;
 }
 
 .table-primary,
@@ -11140,7 +11140,7 @@ a.close.disabled {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #f2edf3;
+  background-color: #f9f9ff;
   background-clip: padding-box;
   border: 1px solid #ebedf2;
   border-radius: 0.3rem;
@@ -16648,10 +16648,10 @@ input:focus {
 
 /* Fonts */
 @font-face {
-  font-family: 'ubuntu-light';
-  src: url("../../fonts/Ubuntu/Ubuntu-Light.eot");
+  font-family: 'Poppins';
+  src: url("../../fonts/Ubuntu/Poppins.eot");
   /* IE9 Compat Modes */
-  src: url("../../fonts/Ubuntu/Ubuntu-Light.woff2") format("woff2"), url("../../fonts/Ubuntu/Ubuntu-Light.woff") format("woff"), url("../../fonts/Ubuntu/Ubuntu-Light.ttf") format("truetype");
+  src: url("../../fonts/Ubuntu/Poppins.woff2") format("woff2"), url("../../fonts/Ubuntu/Poppins.woff") format("woff"), url("../../fonts/Ubuntu/Poppins.ttf") format("truetype");
 }
 
 @font-face {
@@ -16989,7 +16989,7 @@ pre {
 code {
   padding: 5px;
   color: #fe7c96;
-  font-family: "ubuntu-light", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   border-radius: 4px;
 }
@@ -17026,7 +17026,7 @@ code {
 
 /* Footer */
 .footer {
-  background: #f2edf3;
+  background: #f9f9ff;
   border-top: 1px solid #e7dee9;
   padding: 30px 1rem;
   transition: all 0.25s ease;
@@ -17183,7 +17183,7 @@ code {
 }
 
 .font-weight-light {
-  font-family: "ubuntu-light", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .font-weight-bold {
@@ -17313,8 +17313,8 @@ code {
 
 .bg-gradient-primary,
 #theme-settings .settings-close {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff)) !important;
-  background: linear-gradient(to right, #da8cff, #9a55ff) !important;
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff)) !important;
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%) !important;
 }
 
 .bg-gradient-secondary {
@@ -18034,8 +18034,8 @@ code {
 }
 
 .accordion.accordion-solid-header .card .card-header a[aria-expanded="true"] {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   color: #ffffff;
 }
 
@@ -18097,8 +18097,8 @@ code {
 }
 
 .accordion.accordion-multi-colored .card:nth-child(1) {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
 }
 
 .accordion.accordion-multi-colored .card:nth-child(2) {
@@ -18193,8 +18193,8 @@ code {
 
 /*Badge gradient variations*/
 .badge-gradient-primary {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   color: #ffffff;
 }
 
@@ -19206,8 +19206,8 @@ code {
 .wizard>.actions .disabled a:focus,
 .btn-outline-primary:active,
 .wizard>.actions .disabled a:active {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   color: #000;
 }
 
@@ -19638,8 +19638,8 @@ code {
 
 /* gradient buttons */
 .btn-gradient-primary {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   border: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -19648,8 +19648,8 @@ code {
 .btn-gradient-primary:not([disabled]):not(.disabled):active,
 .btn-gradient-primary:not([disabled]):not(.disabled).active,
 .show>.btn-gradient-primary.dropdown-toggle {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
 }
 
 .btn-gradient-primary:hover {
@@ -20617,8 +20617,8 @@ code {
 }
 
 .form-check .form-check-label input[type="checkbox"]:checked+.input-helper:before {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   border-width: 0;
 }
 
@@ -20688,8 +20688,8 @@ code {
 }
 
 .form-check .form-check-label input[type="radio"]:checked+.input-helper:before {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   border-width: 0;
 }
 
@@ -20720,8 +20720,8 @@ code {
 
 .form-check-primary.form-check label input[type="checkbox"]:checked+.input-helper:before,
 .form-check-primary.form-check label input[type="radio"]:checked+.input-helper:before {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
 }
 
 .form-check-secondary.form-check label input[type="checkbox"]+.input-helper:before,
@@ -22294,8 +22294,8 @@ dl li {
 }
 
 .gradient-bullet-list li:nth-child(5):before {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
 }
 
 .bullet-line-list {
@@ -23148,8 +23148,8 @@ dl li {
 }
 
 .popover-primary .popover-header {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   color: #ffffff;
   border-bottom: 0;
 }
@@ -23700,8 +23700,8 @@ dl li {
 }
 
 .nav-tabs.nav-tabs-vertical-custom {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   border-radius: 4px;
 }
 
@@ -23764,8 +23764,8 @@ dl li {
 }
 
 .nav-pills-primary .nav-link.active {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
 }
 
 .nav-pills-secondary .nav-link {
@@ -23892,7 +23892,7 @@ dl li {
   border-radius: 2px;
   padding: 20px;
   position: relative;
-  background: #f2edf3;
+  background: #f9f9ff;
   border-radius: 6px;
   -webkit-box-shadow: 1px 2px 35px 0 rgba(1, 1, 1, 0.1);
   box-shadow: 1px 2px 35px 0 rgba(1, 1, 1, 0.1);
@@ -23999,13 +23999,13 @@ dl li {
 }
 
 .timeline-wrapper-primary .timeline-panel:before {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
 }
 
 .timeline-wrapper-primary .timeline-badge {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
 }
 
 .timeline-wrapper-secondary .timeline-panel:before {
@@ -24191,8 +24191,8 @@ dl li {
 }
 
 .tooltip-primary .tooltip-inner {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   color: #ffffff;
 }
 
@@ -26512,8 +26512,8 @@ body.avgrund-active {
 }
 
 .fc .fc-event.fc-start {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   border-radius: 4px;
   border-left: 4px solid #b66dff;
 }
@@ -27031,8 +27031,8 @@ body.avgrund-active {
 }
 
 .pws_tabs_container ul.pws_tabs_controll li a.pws_tab_active {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   color: #fff;
 }
 
@@ -27387,8 +27387,8 @@ div.tagsinput {
 }
 
 div.tagsinput span.tag {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   border: 0;
   color: #ffffff;
   padding: 6px 14px;
@@ -27834,7 +27834,7 @@ div.tagsinput span.tag a {
 }
 
 .wizard>.content {
-  background: #f2edf3;
+  background: #f9f9ff;
   display: block;
   margin: 0.5em;
   min-height: 24em;
@@ -28435,7 +28435,7 @@ div.tagsinput span.tag a {
 .auth.multi-step-login {
   height: 100%;
   min-height: 100vh;
-  background: #f2edf3;
+  background: #f9f9ff;
 }
 
 .auth.multi-step-login .step-form {
@@ -29136,8 +29136,8 @@ footer h4 a {
 }
 
 .tickets-tab-switch .nav-item .nav-link.active {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   border-radius: 4px;
   color: #ffffff;
   border: none;
@@ -29442,7 +29442,7 @@ footer h4 a {
 }
 
 .chat-app-wrapper .chat-container-wrapper .chat-bubble.incoming-chat .chat-message {
-  background: #f2edf3;
+  background: #f9f9ff;
   margin-left: 45px;
 }
 
@@ -30274,7 +30274,7 @@ footer h4 a {
 
 /* Navbar */
 .navbar {
-  font-family: "ubuntu-light", sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #fff;
   transition: background 0.25s ease;
   -webkit-transition: background 0.25s ease;
@@ -30393,28 +30393,28 @@ footer h4 a {
 .navbar .navbar-menu-wrapper .search-field .asColorPicker-wrap input:-ms-input-placeholder {
   font-size: 0.875rem;
   color: #9c9fa6;
-  font-family: "ubuntu-light", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar .navbar-menu-wrapper .search-field .input-group input:-moz-placeholder,
 .navbar .navbar-menu-wrapper .search-field .asColorPicker-wrap input:-moz-placeholder {
   font-size: 0.875rem;
   color: #9c9fa6;
-  font-family: "ubuntu-light", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar .navbar-menu-wrapper .search-field .input-group input::-moz-placeholder,
 .navbar .navbar-menu-wrapper .search-field .asColorPicker-wrap input::-moz-placeholder {
   font-size: 0.875rem;
   color: #9c9fa6;
-  font-family: "ubuntu-light", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar .navbar-menu-wrapper .search-field .input-group input::-webkit-input-placeholder,
 .navbar .navbar-menu-wrapper .search-field .asColorPicker-wrap input::-webkit-input-placeholder {
   font-size: 0.875rem;
   color: #9c9fa6;
-  font-family: "ubuntu-light", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar .navbar-menu-wrapper .search-field .input-group i,
@@ -30680,8 +30680,8 @@ footer h4 a {
 
 /* Navbar color variations */
 .navbar.navbar-primary .navbar-menu-wrapper {
-  background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: -webkit-gradient(linear, left top, right top, from(#62bdfc), to(#8490ff));
+  background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   color: #ffffff;
 }
 
@@ -31714,7 +31714,7 @@ footer h4 a {
 }
 
 .content-wrapper {
-  background: #f2edf3;
+  background: #f9f9ff;
   padding: 2.75rem 2.25rem;
   width: 100%;
   -webkit-box-flex: 1;
