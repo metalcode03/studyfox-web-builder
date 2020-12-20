@@ -997,6 +997,7 @@ Modernizr.load = function () {
     }
 })(void 0);
 
+var currenthostname = window.location.hostname;
 
 jQuery(document).ready(function ($) {
     var Video_back = new video_background($("#home"), {
@@ -1005,11 +1006,11 @@ jQuery(document).ready(function ($) {
         "loop": true, //Loop when it reaches the end
         "autoplay": true, //Autoplay at start
         "muted": true, //Muted at start
-        "mp4": "http://localhost:8000/static/templates/edulogy/upload/preview.mp4", //Path to video mp4 format
-        "ogg": "http://localhost:8000/static/templates/edulogy/upload/preview.ogg", //Path to video ogg format
-        "webm": "http://localhost:8000/static/templates/edulogy/upload/preview.webm", //Path to video webm format
+        "mp4": "https://studyfoxx.com/static/templates/edulogy/upload/preview.mp4", //Path to video mp4 format
+        "ogg": "https://studyfoxx.com//static/templates/edulogy/upload/preview.ogg", //Path to video ogg format
+        "webm": "https://studyfoxx.com/static/templates/edulogy/upload/preview.webm", //Path to video webm format
         "video_ratio": 1.7778, // width/height -> If none provided sizing of the video is set to adjust
-        "fallback_image": "http://localhost:8000/static/templates/edulogy/images/dummy.png", //Fallback image path
+    "fallback_image": "https://studyfoxx.com/static/templates/edulogy/images/dummy.png", //Fallback image path
         "priority": "html5" //Priority for html5 (if set to flash and tested locally will give a flash security error)
     });
 });
