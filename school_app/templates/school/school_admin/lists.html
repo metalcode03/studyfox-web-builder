@@ -1,0 +1,355 @@
+{% extends 'school/school_admin/bases/base.html' %}
+{% load static %}
+
+{% block breadcrumbs %}
+<h3 class="page-title">
+    <span class="page-title-icon bg-gradient-primary text-white mr-2"
+        style="background:linear-gradient(100deg, #8490ff 10%, #62bdfc 100%) !important; border-radius: 25px;">
+        <i class="mdi mdi-home"></i>
+    </span> Course </h3>
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">
+            <span></span>Overview <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+        </li>
+    </ul>
+</nav>
+{% endblock breadcrumbs %}
+
+{% block mainbody %}
+<div class="row">
+<div class="col-12 grid-margin">
+    <div class="card" style="box-shadow: 0px 3px 10px rgba(127, 144, 168, 0.241); border-radius: 10px;">
+        <div class="card-body">
+                <form
+                    action="#">
+                    <div class="form-group d-flex">
+                        <input type="text" class="form-control" placeholder="Search Here"
+                            value="">
+                        <button type="submit"
+                            class="btn btn-gradient-primary border ml-3">Search</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card" style="box-shadow: 0px 3px 10px rgba(127, 144, 168, 0.241); border-radius: 10px;">
+            <div class="card-body">
+                <div class="row justify-content-around">
+                    <h4 class="card-title">( JSS 1 ) Students</h4>
+                    <div class="col-6"></div>
+                    <small><a href="#">View All</a></small>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th> Students </th>
+                                <th> Status </th>
+                                <th> Last Update </th>
+                                <th> Tracking ID </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'assets/images/faces/face1.jpg' %}" class="mr-2" alt="image">
+                                    David
+                                    Grey 
+                                </td>
+                                <td>
+                                    <label class="badge badge-gradient-success">PRESENT</label>
+                                </td>
+                                <td> Dec 5, 2017 </td>
+                                <td> WD-12345 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'assets/images/faces/face2.jpg' %}" class="mr-2" alt="image">
+                                    Stella
+                                    Johnson
+                                </td>
+                                <td>
+                                    <label class="badge badge-gradient-success">PRESENT</label>
+                                </td>
+                                <td> Dec 12, 2017 </td>
+                                <td> WD-12346 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'assets/images/faces/face3.jpg' %}" class="mr-2" alt="image">
+                                    Marina
+                                    Michel </td>
+                                <td>
+                                    <label class="badge badge-gradient-danger">ABSENT</label>
+                                </td>
+                                <td> Dec 16, 2017 </td>
+                                <td> WD-12347 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'assets/images/faces/face4.jpg' %}" class="mr-2" alt="image">
+                                    John Doe
+                                </td>
+                                <td>
+                                    <label class="badge badge-gradient-success">PRESENT</label>
+                                </td>
+                                <td> Dec 3, 2017 </td>
+                                <td> WD-12348 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card" style="box-shadow: 0px 3px 10px rgba(127, 144, 168, 0.241); border-radius: 10px;">
+            <div class="card-body">
+                <div class="row justify-content-around">
+                    <h4 class="card-title">Teacher</h4>
+                    <div class="col-6"></div>
+                    <small><a href="#">View All</a></small>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th> Teachers </th>
+                                <th> Subjects </th>
+                                <th> Last Update </th>
+                                <th> Tracking ID </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'assets/images/faces/face1.jpg' %}" class="mr-2" alt="image">
+                                    David
+                                    Grey
+                                </td>
+                                <td>
+                                    <!-- <label class="badge badge-gradient-success">PRESENT</label> -->
+                                    Mathematics
+                                </td>
+                                <td> Dec 5, 2017 </td>
+                                <td> WD-12345 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'assets/images/faces/face2.jpg' %}" class="mr-2" alt="image">
+                                    Stella
+                                    Johnson
+                                </td>
+                                <td>
+                                    <!-- <label class="badge badge-gradient-success">PRESENT</label> -->
+                                    English
+                                </td>
+                                <td> Dec 12, 2017 </td>
+                                <td> WD-12346 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'assets/images/faces/face3.jpg' %}" class="mr-2" alt="image">
+                                    Marina
+                                    Michel </td>
+                                <td>
+                                    <!-- <label class="badge badge-gradient-danger">ABSENT</label> -->
+                                    Biology
+                                </td>
+                                <td> Dec 16, 2017 </td>
+                                <td> WD-12347 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'assets/images/faces/face4.jpg' %}" class="mr-2" alt="image">
+                                    John Doe
+                                </td>
+                                <td>
+                                    <!-- <label class="badge badge-gradient-success">PRESENT</label> -->
+                                    Lit-in-Eng
+                                </td>
+                                <td> Dec 3, 2017 </td>
+                                <td> WD-12348 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card" style="box-shadow: 0px 3px 10px rgba(127, 144, 168, 0.241); border-radius: 10px;">
+            <div class="card-body">
+                <div class="row justify-content-around">
+                    <h4 class="card-title">Guardian</h4>
+                    <div class="col-6"></div>
+                    <small><a href="#">View All</a></small>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th> Guardian </th>
+                                <th> Subjects </th>
+                                <th> Last Update </th>
+                                <th> Tracking ID </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'assets/images/faces/face1.jpg' %}" class="mr-2" alt="image">
+                                    David
+                                    Grey
+                                </td>
+                                <td>
+                                    <!-- <label class="badge badge-gradient-success">PRESENT</label> -->
+                                    Mathematics
+                                </td>
+                                <td> Dec 5, 2017 </td>
+                                <td> WD-12345 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'assets/images/faces/face2.jpg' %}" class="mr-2" alt="image">
+                                    Stella
+                                    Johnson
+                                </td>
+                                <td>
+                                    <!-- <label class="badge badge-gradient-success">PRESENT</label> -->
+                                    English
+                                </td>
+                                <td> Dec 12, 2017 </td>
+                                <td> WD-12346 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'assets/images/faces/face3.jpg' %}" class="mr-2" alt="image">
+                                    Marina
+                                    Michel </td>
+                                <td>
+                                    <!-- <label class="badge badge-gradient-danger">ABSENT</label> -->
+                                    Biology
+                                </td>
+                                <td> Dec 16, 2017 </td>
+                                <td> WD-12347 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="{% static 'assets/images/faces/face4.jpg' %}" class="mr-2" alt="image">
+                                    John Doe
+                                </td>
+                                <td>
+                                    <!-- <label class="badge badge-gradient-success">PRESENT</label> -->
+                                    Lit-in-Eng
+                                </td>
+                                <td> Dec 3, 2017 </td>
+                                <td> WD-12348 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body p-0 d-flex">
+                <div id="inline-datepicker" class="datepicker datepicker-custom">
+                    <div class="datepicker datepicker-inline">
+                        <div class="datepicker-days" style="">
+                            <table class="table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th colspan="7" class="datepicker-title" style="display: none;">
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="prev">«</th>
+                                        <th colspan="5" class="datepicker-switch">June 2020</th>
+                                        <th class="next">»</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="dow">Su</th>
+                                        <th class="dow">Mo</th>
+                                        <th class="dow">Tu</th>
+                                        <th class="dow">We</th>
+                                        <th class="dow">Th</th>
+                                        <th class="dow">Fr</th>
+                                        <th class="dow">Sa</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="old day" data-date="1590883200000"></td>
+                                        <td class="day" data-date="1590969600000">1</td>
+                                        <td class="day" data-date="1591056000000">2</td>
+                                        <td class="day" data-date="1591142400000">3</td>
+                                        <td class="day" data-date="1591228800000">4</td>
+                                        <td class="day" data-date="1591315200000">5</td>
+                                        <td class="day" data-date="1591401600000">6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="day" data-date="1591488000000">7</td>
+                                        <td class="day" data-date="1591574400000">8</td>
+                                        <td class="day" data-date="1591660800000">9</td>
+                                        <td class="day" data-date="1591747200000">10</td>
+                                        <td class="day" data-date="1591833600000">11</td>
+                                        <td class="day" data-date="1591920000000">12</td>
+                                        <td class="day" data-date="1592006400000">13</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="day" data-date="1592092800000">14</td>
+                                        <td class="day" data-date="1592179200000">15</td>
+                                        <td class="today day" data-date="1592265600000">16</td>
+                                        <td class="day" data-date="1592352000000">17</td>
+                                        <td class="day" data-date="1592438400000">18</td>
+                                        <td class="day" data-date="1592524800000">19</td>
+                                        <td class="day" data-date="1592611200000">20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="day" data-date="1592697600000">21</td>
+                                        <td class="day" data-date="1592784000000">22</td>
+                                        <td class="day" data-date="1592870400000">23</td>
+                                        <td class="day" data-date="1592956800000">24</td>
+                                        <td class="day" data-date="1593043200000">25</td>
+                                        <td class="day" data-date="1593129600000">26</td>
+                                        <td class="day" data-date="1593216000000">27</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="day" data-date="1593302400000">28</td>
+                                        <td class="day" data-date="1593388800000">29</td>
+                                        <td class="day" data-date="1593475200000">30</td>
+                                        <td class="old day" data-date="1593561600000"></td>
+                                        <td class="old day" data-date="1593648000000"></td>
+                                        <td class="old day" data-date="1593734400000"></td>
+                                        <td class="old day" data-date="1593820800000"></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="7" class="today" style="display: none;">Today</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="7" class="clear" style="display: none;">Clear</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock mainbody %}

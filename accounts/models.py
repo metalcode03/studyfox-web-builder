@@ -4,6 +4,7 @@ from django.core.validators import RegexValidator
 from django.utils.translation import gettext_lazy as _
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from constants import RELIGION, GENDER, STATE, COUNTRY
 
 USERNAME_REGEX = '^[a-zA-Z0-9.+-]*$'
 
@@ -103,9 +104,10 @@ class User(AbstractBaseUser):
     active = models.BooleanField(default=True)
     admin = models.BooleanField(default=False)
     staff = models.BooleanField(default=False)
-    student = models.BooleanField(default=True)
+    student = models.BooleanField(default=False)
     teacher = models.BooleanField(default=False)
     school_owner = models.BooleanField(default=False)
+    guardian = models.BooleanField(default=False)
 
     objects = UserManager()
 
@@ -149,22 +151,26 @@ class User(AbstractBaseUser):
 
 
 class Profile(models.Model):
-    GENDERCHOICE = (
-        ('MA', _('Male')),
-        ('FA', _('Female')),
-        ('OT', _('Others')),
-    )
     user = models.OneToOneField("User", on_delete=models.CASCADE)
     first_name = models.CharField(max_length=40, blank=True)
     last_name = models.CharField(max_length=40, blank=True)
+    other_name = models.CharField(max_length=40, blank=True)
     image = models.ImageField(upload_to='profile_img',
                               default='avatar.jpg', blank=True)
     gender = models.CharField(
         max_length=200,
-        choices=GENDERCHOICE,
-        default=GENDERCHOICE[0],
+        choices=GENDER,
+        default=GENDER[0],
         blank=True,
     )
+    phone_number = models.CharField(max_length=22, blank=True)
+    address = models.CharField(max_length=230, blank=True)
+    created = models.DateTimeField(auto_now_add=True, blank=True)
+    country = models.CharField(max_length=200, choices=COUNTRY, blank=True)
+    state = models.CharField(max_length=200, choices=STATE, blank=True)
+
+    
+    
 
     class Meta:
         verbose_name = 'Profile'

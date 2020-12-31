@@ -18,173 +18,90 @@
 {% endblock breadcrumbs %}
 
 {% block mainbody %}
-    <div class="row">
-        <div class="col-12 grid-margin">
-            <div class="card" style="box-shadow: 0px 3px 10px rgba(127, 144, 168, 0.241); border-radius: 10px;">
-                <div class="card-body">
-                    <h4 class="card-title">Recent Tickets</h4>
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th> Assignee </th>
-                                    <th> Subject </th>
-                                    <th> Status </th>
-                                    <th> Last Update </th>
-                                    <th> Tracking ID </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <img src="{% static 'assets/images/faces/face1.jpg' %}" class="mr-2"
-                                            alt="image"> David
-                                        Grey </td>
-                                    <td> Fund is not recieved </td>
-                                    <td>
-                                        <label class="badge badge-gradient-success">DONE</label>
-                                    </td>
-                                    <td> Dec 5, 2017 </td>
-                                    <td> WD-12345 </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="{% static 'assets/images/faces/face2.jpg' %}" class="mr-2"
-                                            alt="image"> Stella
-                                        Johnson </td>
-                                    <td> High loading time </td>
-                                    <td>
-                                        <label class="badge badge-gradient-warning">PROGRESS</label>
-                                    </td>
-                                    <td> Dec 12, 2017 </td>
-                                    <td> WD-12346 </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="{% static 'assets/images/faces/face3.jpg' %}" class="mr-2"
-                                            alt="image"> Marina
-                                        Michel </td>
-                                    <td> Website down for one week </td>
-                                    <td>
-                                        <label class="badge badge-gradient-info">ON HOLD</label>
-                                    </td>
-                                    <td> Dec 16, 2017 </td>
-                                    <td> WD-12347 </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="{% static 'assets/images/faces/face4.jpg' %}" class="mr-2"
-                                            alt="image"> John Doe
-                                    </td>
-                                    <td> Loosing control on server </td>
-                                    <td>
-                                        <label class="badge badge-gradient-danger">REJECTED</label>
-                                    </td>
-                                    <td> Dec 3, 2017 </td>
-                                    <td> WD-12348 </td>
-                                </tr>
-                            </tbody>
-                        </table>
+<div class="row">
+    <div class="col-md-12 stretch-card grid-margin">
+        <div class="card card-img-holder text-white"
+            style="background: linear-gradient(100deg, #8490ff 10%, #62bdfc 100%); box-shadow: 0px 3px 10px rgba(18, 117, 255, 0.104); border-radius: 10px;">
+            <div class="card-body">
+                <img src="{% static 'assets/images/dashboard/circle.svg' %}" class="card-img-absolute" alt="circle-image">
+                <h4 class="font-weight-normal mb-3">Welcome <i class="lnr lnr-bubble mdi-24px float-right"></i>
+                </h4>
+                <h2 class="mb-5">Metalcode</h2>
+                <h6 class="card-text h6-bag">Feel free to check navigate pages.</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-4 grid-margin">
+        <div class="card" style="box-shadow: 0px 3px 10px rgba(127, 144, 168, 0.029); border-radius: 10px;">
+            <div class="card-body">
+                <div class="row justify-content-around">
+                    <div class="card-title">
+                        Students
                     </div>
+                    <div class="col-1"></div>
+                    <h3 style="font-weight:500;">34,555</h3>
+                </div>
+                <div class="row justify-content-around">
+                    <div class="text-secondary text-small h6-bag">Total Students Count</div>
+                    <div class="col-4"></div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-7 grid-margin stretch-card">
-            <div class="card">
+        <div class="col-lg-4 grid-margin">
+            <div class="card" style="box-shadow: 0px 3px 10px rgba(127, 144, 168, 0.029); border-radius: 10px;">
                 <div class="card-body">
-                    <h4 class="card-title">Project Status</h4>
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th> # </th>
-                                    <th> Name </th>
-                                    <th> Due Date </th>
-                                    <th> Progress </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td> 1 </td>
-                                    <td> Herman Beck </td>
-                                    <td> May 15, 2015 </td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-gradient-success" role="progressbar"
-                                                style="width: 25%" aria-valuenow="25" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td> 2 </td>
-                                    <td> Messsy Adam </td>
-                                    <td> Jul 01, 2015 </td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-gradient-danger" role="progressbar"
-                                                style="width: 75%" aria-valuenow="75" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td> 3 </td>
-                                    <td> John Richards </td>
-                                    <td> Apr 12, 2015 </td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-gradient-warning" role="progressbar"
-                                                style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td> 4 </td>
-                                    <td> Peter Meggik </td>
-                                    <td> May 15, 2015 </td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-gradient-primary" role="progressbar"
-                                                style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td> 5 </td>
-                                    <td> Edward </td>
-                                    <td> May 03, 2015 </td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-gradient-danger" role="progressbar"
-                                                style="width: 35%" aria-valuenow="35" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td> 5 </td>
-                                    <td> Ronald </td>
-                                    <td> Jun 05, 2015 </td>
-                                    <td>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-gradient-info" role="progressbar"
-                                                style="width: 65%" aria-valuenow="65" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="row justify-content-around">
+                        <div class="card-title">
+                            Teachers
+                        </div>
+                        <div class="col-1"></div>
+                        <h3 style="font-weight:500;">34,555</h3>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="text-secondary text-small h6-bag">Total Teachers Count</div>
+                        <div class="col-4"></div>
                     </div>
                 </div>
             </div>
         </div>
+            <div class="col-lg-4 grid-margin">
+                <div class="card" style="box-shadow: 0px 3px 10px rgba(127, 144, 168, 0.029); border-radius: 10px;">
+                    <div class="card-body">
+                        <div class="row justify-content-around">
+                            <div class="card-title">
+                                Parents
+                            </div>
+                            <div class="col-1"></div>
+                            <h3 style="font-weight:500;">501k</h3>
+                        </div>
+                        <div class="row justify-content-around">
+                            <div class="text-secondary text-small h6-bag">Total Parents Count</div>
+                            <div class="col-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+    <div class="row">
+
+        <div class="col-lg-7 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body p-0 d-flex">
+                    <div id="inline-datepicker" class="datepicker datepicker-custom">
+                        <div class="datepicker datepicker-inline">
+                            <div class="datepicker-days">
+                                {{calendar}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="col-md-5 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
@@ -246,6 +163,7 @@
             </div>
         </div>
     </div>
+
 
 <!-- content-wrapper ends -->
 {% endblock mainbody %}

@@ -1,9 +1,23 @@
+from datetime import datetime
+# class based views
+from django.views.generic.edit import UpdateView
+from django.views.generic.list import ListView
+# modules
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.urls import reverse_lazy
 from django.shortcuts import render
+from django.http import HttpResponse
+from django.utils.safestring import mark_safe
+
+# Installed apps modules
+from main.utils import Calendar
+from main.models import Event
+
+# Local modules
 from .models import *
 
-# Create your views here.
-
-
+# Create views for school website.
 def index(request, slug):
     school = School.objects.get(slug=slug)
     school_home = SchoolHomePage.objects.get(school=school)
@@ -53,6 +67,5 @@ def aboutus(request, slug):
         'social_link': social_link,
         'personals': personals,
         'singlefeature': singlefeature[:5],
-
     }
     return render(request, f'school/temp/{school.template_path}/aboutus.html', context)

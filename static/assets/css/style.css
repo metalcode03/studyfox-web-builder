@@ -16655,17 +16655,17 @@ input:focus {
 }
 
 @font-face {
-  font-family: 'ubuntu-regular';
-  src: url("../../fonts/Ubuntu/Ubuntu-Regular.eot");
+  font-family: 'Poppins';
+  src: url("../../fonts/Ubuntu/Poppins.eot");
   /* IE9 Compat Modes */
-  src: url("../../fonts/Ubuntu/Ubuntu-Regular.woff2") format("woff2"), url("../../fonts/Ubuntu/Ubuntu-Regular.woff") format("woff"), url("../../fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+  src: url("../../fonts/Ubuntu/Poppins.woff2") format("woff2"), url("../../fonts/Ubuntu/Poppins.woff") format("woff"), url("../../fonts/Ubuntu/Poppins.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'ubuntu-medium';
-  src: url("../../fonts/Ubuntu/Ubuntu-Medium.eot");
+  font-family: 'Poppins';
+  src: url("../../fonts/Ubuntu/Poppins.eot");
   /* IE9 Compat Modes */
-  src: url("../../fonts/Ubuntu/Ubuntu-Medium.woff2") format("woff2"), url("../../fonts/Ubuntu/Ubuntu-Medium.woff") format("woff"), url("../../fonts/Ubuntu/Ubuntu-Medium.ttf") format("truetype");
+  src: url("../../fonts/Ubuntu/Poppins.woff2") format("woff2"), url("../../fonts/Ubuntu/Poppins.woff") format("woff"), url("../../fonts/Ubuntu/Poppins.ttf") format("truetype");
 }
 
 @font-face {
@@ -16758,7 +16758,7 @@ input:focus {
 /* Typography */
 body {
   font-size: 1rem;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: initial;
   line-height: normal;
   -webkit-font-smoothing: antialiased;
@@ -16776,7 +16776,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "ubuntu-medium", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
@@ -17034,7 +17034,7 @@ code {
   -webkit-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
   font-size: calc(0.875rem - 0.05rem);
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .footer a {
@@ -17191,7 +17191,7 @@ code {
 }
 
 .font-weight-normal {
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .font-weight-medium {
@@ -17887,7 +17887,7 @@ code {
 }
 
 .accordion .card .card-header * {
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
 }
 
@@ -17926,7 +17926,7 @@ code {
 .accordion .card .card-body {
   font-size: 14px;
   padding: 0 2rem 2rem 2rem;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5;
 }
 
@@ -18140,7 +18140,7 @@ code {
   font-weight: initial;
   line-height: 1;
   padding: .375rem .5625rem;
-  font-family: "ubuntu-medium", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .badge.badge-pill {
@@ -20388,12 +20388,12 @@ code {
   color: #343a40;
   margin-bottom: 0.75rem;
   text-transform: capitalize;
-  font-family: "ubuntu-medium", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.125rem;
 }
 
 .card .card-subtitle {
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-top: 0.625rem;
   margin-bottom: 0.625rem;
 }
@@ -20401,7 +20401,7 @@ code {
 .card .card-description {
   color: #76838f;
   margin-bottom: 1.5rem;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .card.card-outline-success {
@@ -20866,7 +20866,7 @@ code {
 .tt-query,
 .tt-hint {
   border: 1px solid #ebedf2;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.8125rem;
 }
 
@@ -21227,7 +21227,7 @@ select.border-dark.tt-hint:focus {
   -ms-flex-align: center;
   align-items: center;
   padding: 15px 15px;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
 }
 
@@ -23606,7 +23606,7 @@ dl li {
 .jsgrid .jsgrid-table thead th {
   border-top: 0;
   border-bottom-width: 1px;
-  font-family: "ubuntu-medium", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: initial;
 }
 
@@ -24187,7 +24187,7 @@ dl li {
 }
 
 .tooltip .tooltip-inner {
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .tooltip-primary .tooltip-inner {
@@ -24427,7 +24427,7 @@ dl li {
 .pricing-table .pricing-card .pricing-card-body .plan-features li {
   text-align: left;
   padding: 4px 0px;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
 }
 
@@ -25142,7 +25142,7 @@ dl li {
 
 .email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user .u-name {
   margin: 0;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.875rem;
   line-height: 1;
   color: #000000;
@@ -25205,7 +25205,7 @@ dl li {
 .email-wrapper .mail-list-container .mail-list .content .sender-name {
   margin-bottom: 0;
   font-size: 0.875rem;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   max-width: 95%;
 }
 
@@ -25265,7 +25265,7 @@ dl li {
 
 .email-wrapper .message-body .sender-details .details .sender-email {
   margin-bottom: 20px;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .email-wrapper .message-body .sender-details .details .sender-email i {
@@ -25350,7 +25350,7 @@ dl li {
   left: 50%;
   z-index: 1000;
   font-size: 0.875rem;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: initial;
   line-height: 1.85;
   border-radius: 10px;
@@ -25360,7 +25360,7 @@ dl li {
 
 .avgrund-popin p {
   font-size: 0.875rem;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: initial;
 }
 
@@ -25571,7 +25571,7 @@ body.avgrund-active {
 /* CodeMirror */
 .CodeMirror {
   font-size: 0.875rem;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   height: auto;
   text-align: left;
   min-height: auto;
@@ -25840,7 +25840,7 @@ body.avgrund-active {
 
 .datepicker.datepicker-dropdown .datepicker-days table.table-condensed thead tr th.dow,
 .datepicker.datepicker-inline .datepicker-days table.table-condensed thead tr th.dow {
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #434a54;
   font-size: .875rem;
   font-weight: initial;
@@ -26445,7 +26445,7 @@ body.avgrund-active {
   height: auto;
   background-image: none;
   text-shadow: none;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #ffffff;
   border-color: #ebedf2;
   text-transform: capitalize;
@@ -27297,7 +27297,7 @@ body.avgrund-active {
 .swal2-modal .swal2-title {
   font-size: 25px;
   line-height: 1;
-  font-family: "ubuntu-medium", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #343a40;
   font-weight: initial;
   margin-bottom: 0;
@@ -27333,7 +27333,7 @@ body.avgrund-active {
 
 .swal2-modal .swal2-content {
   font-size: 0.875rem;
-  font-family: "ubuntu-medium", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #343a40;
   font-weight: initial;
   margin-top: 11px;
@@ -27746,7 +27746,7 @@ div.tagsinput span.tag a {
   text-decoration: none;
   border-radius: 5px;
   font-size: 0.875rem;
-  font-family: "ubuntu-medium", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .wizard>.steps a:hover {
@@ -30195,7 +30195,7 @@ footer h4 a {
 }
 
 .settings-panel .events p {
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .rtl .settings-panel {
@@ -30930,7 +30930,7 @@ footer h4 a {
 .sidebar {
   min-height: calc(100vh - 70px);
   background: #ffffff;
-  font-family: "ubuntu-regular", sans-serif;
+  font-family: "Poppins", sans-serif;
   padding: 0;
   width: 260px;
   z-index: 11;
@@ -31055,7 +31055,7 @@ footer h4 a {
 
 .sidebar .nav .nav-item.active>.nav-link .menu-title {
   color: #b66dff;
-  font-family: "ubuntu-medium", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .sidebar .nav .nav-item.active>.nav-link i {

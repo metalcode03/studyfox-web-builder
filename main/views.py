@@ -19,9 +19,6 @@ def aboutus(request):
     return render(request, 'main/about.html')
 
 
-def passer(request):
-    return render(request, 'school/school_admin/admin.html')
-
 def success_message(request):
     return render(request, 'school/school_registration/congrats.html')
 

@@ -3,12 +3,16 @@ from django.db import models
 from django.db.models.fields import related
 from django.shortcuts import reverse
 from django_countries.fields import CountryField
+from accounts.models import User
 
 
 class School(models.Model):
+    # admin = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     name = models.CharField(max_length=40, blank=True)
     logo = models.ImageField(upload_to='profilio/logo', blank=True)
     description = models.TextField(blank=True)
+    created_on = models.DateTimeField(auto_now_add=True, blank=True)
+    on_trial = models.BooleanField(default=True)
     template_path = models.CharField(
         max_length=30, blank=True, default='default')
     slug = models.SlugField(blank=True)
@@ -19,12 +23,12 @@ class School(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     def get_index_url(self):
         return reverse("schoolapp:index", kwargs={
             'slug': self.slug
         })
-    
+
 
 class SchoolHomePage(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
@@ -133,10 +137,10 @@ class Personals(models.Model):
     title = models.CharField(max_length=255, blank=True)
     description = models.TextField(blank=True)
     image = models.ImageField(upload_to='personals', blank=True)
-    
+
     class Meta:
         verbose_name_plural = 'Personals'
-        
+
     def __str__(self):
         return self.title
 
@@ -144,10 +148,10 @@ class Personals(models.Model):
 class SingleFeature(models.Model):
     personal = models.ForeignKey(Personals, on_delete=models.CASCADE)
     feature = models.CharField(max_length=230)
-    
+
     class Meta:
         verbose_name_plural = 'Single Feature'
-    
+
     def __str__(self):
         return self.feature
 
@@ -157,22 +161,22 @@ class SchoolTeacher(models.Model):
     name = models.CharField(max_length=150, blank=True)
     title = models.CharField(max_length=400, blank=True)
     image = models.ImageField(upload_to='school/teachers', blank=True)
-    
+
     class Meta:
         verbose_name_plural = 'School Teachers'
-    
+
     def __str__(self):
         return self.name
-    
+
 
 class SchoolInformation(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     mail = models.EmailField(unique=True, blank=True)
     phone_number = models.IntegerField(blank=True)
-    
+
     class Meta:
         verbose_name_plural = 'School Information'
-    
+
     def __str__(self):
         return self.mail
 
@@ -180,10 +184,10 @@ class SocialLink(models.Model):
     school_info = models.ForeignKey(SchoolInformation, on_delete=models.CASCADE)
     social_urls = models.CharField(max_length=400)
     social_class = models.CharField(max_length=50)
-    
+
     class Meta:
         verbose_name_plural = 'Social Links'
-    
+
     def __str__(self):
         return self.social_class
 
@@ -195,10 +199,9 @@ class SchoolNews(models.Model):
     image = models.ImageField(upload_to='school/news', blank=True)
     description = models.TextField()
     date = models.DateField(auto_now_add=True)
-    
+
     class Meta:
         verbose_name_plural = 'School News'
-        
+
     def __str__(self):
         return self.title
-

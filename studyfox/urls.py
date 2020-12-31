@@ -8,7 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace='main')),
     path('accounts/', include('accounts.urls', namespace='accounts')),
-    path('<slug>/', include('school_app.urls', namespace='schoolapp')),
+    path('web/<slug>/', include('school_app.urls', namespace='schoolapp')),
 ]
 
 if settings.DEBUG:
