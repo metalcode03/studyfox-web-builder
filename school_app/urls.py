@@ -10,5 +10,6 @@ urlpatterns = [
     path('admin', a.dashboard, name='dashboard'),
     path('students/lists', a.student_list, name='student_list'),
     path('dashboard/', a.DashboardView.as_view(), name='dashboard'),
-    path('dashboard/edit/', a.SchoolWebEditView.as_view(), name='web_edit_form')
+    path('dashboard/edit/', a.SchoolWebEditView.as_view(), name='web_edit_form'),
+    path('eventthatidontwantanybodytogoto/<int:id>', a.EventEditView.as_view(), name='event_edit'),
 ]

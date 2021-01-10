@@ -8,17 +8,17 @@
 		              </div>
 		              <nav id="nav-menu-container">
 		                  <ul class="nav-menu">
-		                      <li><a href="index.html">Home</a></li>
+		                      <li><a href="/">Home</a></li>
 		                      <li><a href="{% url 'main:about' %}">About</a></li>
-		                      <li><a href="services.html">Services</a></li>
-		                      <li><a href="price.html">Pricing</a></li>
+		                      <li><a href="{% url 'main:service' %}">Services</a></li>
+		                      <li><a href="{% url 'main:pricing' %}">Pricing</a></li>
 		                      <li class="menu-has-children"><a href="">Blog</a>
 		                          <ul>
-		                              <li><a href="blog-home.html">Blog Home</a></li>
-		                              <li><a href="blog-single.html">Blog Single</a></li>
+		                              <li><a href="{%url 'blog:home' %}">Blog Home</a></li>
+		                              <li><a href="{% url 'blog:post-list' %}">Blog List</a></li>
 		                          </ul>
 		                      </li>
-		                      <li><a href="contact.html">Contact</a></li>
+		                      <li><a href="{% url 'main:contact-us' %}">Contact</a></li>
 		                      <li class="register-btn"><a href="{% url 'accounts:login' %}"
 		                              class="primary-btn text-uppercase"
 		                              style="border-radius: 25px; background:none; border:1px solid #8490ff; color:#8490ff; padding-right:25px; padding-left:25px;">Log

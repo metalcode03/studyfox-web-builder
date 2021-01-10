@@ -9,6 +9,8 @@ urlpatterns = [
     path('', include('main.urls', namespace='main')),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('web/<slug>/', include('school_app.urls', namespace='schoolapp')),
+    path('blog/', include('blog.urls', namespace='blog')),
+    path('tinymce', include('tinymce.urls')),
 ]
 
 if settings.DEBUG:

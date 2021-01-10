@@ -2,8 +2,11 @@ from django.core.checks import messages
 from django.db import models
 from django.db.models.fields import related
 from django.shortcuts import reverse
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django_countries.fields import CountryField
 from accounts.models import User
+
 
 
 class School(models.Model):
@@ -11,8 +14,10 @@ class School(models.Model):
     name = models.CharField(max_length=40, blank=True)
     logo = models.ImageField(upload_to='profilio/logo', blank=True)
     description = models.TextField(blank=True)
-    created_on = models.DateTimeField(auto_now_add=True, blank=True)
+    registeration_date = models.DateTimeField(auto_now_add=True, blank=True)
+    created_on = models.DateField(blank=True, null=True)
     on_trial = models.BooleanField(default=True)
+    phone_number = models.CharField(max_length=20)
     template_path = models.CharField(
         max_length=30, blank=True, default='default')
     slug = models.SlugField(blank=True)
@@ -47,9 +52,9 @@ class SchoolHomePage(models.Model):
 
 class SchoolAchievement(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
-    registered_students = models.PositiveIntegerField(blank=True)
-    qualified_teachers = models.PositiveIntegerField(blank=True)
-    graduated_students = models.PositiveIntegerField(blank=True)
+    registered_students = models.PositiveIntegerField(blank=True, null=True)
+    qualified_teachers = models.PositiveIntegerField(blank=True, null=True)
+    graduated_students = models.PositiveIntegerField(blank=True, null=True)
     date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -172,7 +177,7 @@ class SchoolTeacher(models.Model):
 class SchoolInformation(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     mail = models.EmailField(unique=True, blank=True)
-    phone_number = models.IntegerField(blank=True)
+    phone_number = models.IntegerField(blank=True, null=True)
 
     class Meta:
         verbose_name_plural = 'School Information'
@@ -205,3 +210,19 @@ class SchoolNews(models.Model):
 
     def __str__(self):
         return self.title
+
+
+def post_save_receiver(instance, created, sender, **kwargs):
+    if created:
+        s = SchoolHomePage.objects.create(school=instance)
+        c = SchoolAchievement.objects.create(school=instance)
+        h = SchoolNews.objects.create(school=instance)
+        oo = SchoolInformation.objects.create(school=instance)
+        l = SchoolService.objects.create(school=instance)
+        sc = SchoolTeacher.objects.create(school=instance)
+        ho = SchoolTestimonial.objects.create(school=instance)
+        ot = Personals.objects.create(school=instance)
+        ab = AboutSchool.objects.create(schoool=instance)
+
+
+post_save.connect(post_save_receiver, sender=School)

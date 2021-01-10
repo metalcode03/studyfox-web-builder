@@ -21,6 +21,11 @@ from .models import *
 # Create your views here.
 
 
+def get_date(req_day):
+    if req_day:
+        year, month = (int(x) for x in req_day.split('-'))
+        return datetime.date(year, month, day=1)
+    return datetime.today()
 
 
 class DashboardView(ListView):
@@ -39,20 +44,17 @@ class DashboardView(ListView):
         return context
 
 
-class CalendarView(ListView):
-    model = Event
-    template_name = 'components/calendar.html'
-    success_url = reverse_lazy("calendar")
+def dashboard(request, slug):
+    school = School.objects.get(slug=slug)
+    d = get_date(request.GET.get('month', None))
+    cal = Calendar(d.year, d.month)
+    html_cal = cal.formatmonth(withyear=True)
+    context = {
+        'calendar':mark_safe(html_cal),
+        'school':school
+    }
+    return render(request, 'school/school_admin/admin.html', context)
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        d = get_date(self.request.GET.get('month', None))
-        cal = Calendar(d.year, d.month)
-        html_cal = cal.formatmonth(withyear=True)
-        context['calendar'] = mark_safe(html_cal)
-        # context['prev_month'] = prev_month(d)
-        # context['next_month'] = next_month(d)
-        return
 
 # Form Class Based Views
 
@@ -61,6 +63,17 @@ class EventEditView(UpdateView):
     fields = ['description']
     template_name = 'school/school_registration/cont_form.html'
     success_url = '/'
+    
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        school = School.objects.get(slug=self.kwargs['slug'])
+        event = Event.objects.get(id=self.kwargs['id'])
+        return school, event
+        # queryset['school'] = school
+        # queryset['event'] = event
+        # return queryset
+
+    
 
 
 class SchoolHomeEditView(UpdateView):
@@ -86,9 +99,7 @@ class SchoolWebEditView(DetailView):
 
 # Function Based Views
 
-def dashboard(request, slug):
-    school = School.objects.get(slug=slug)
-    return render(request, 'school/school_admin/admin.html')
+
 
 
 def student_list(request, slug):
@@ -96,8 +107,4 @@ def student_list(request, slug):
     return render(request, 'school/school_admin/lists.html')
 
 
-def get_date(req_day):
-    if req_day:
-        year, month = (int(x) for x in req_day.split('-'))
-        return datetime.date(year, month, day=1)
-    return datetime.today()
+

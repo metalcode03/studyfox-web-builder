@@ -6,12 +6,19 @@
     <div class="container" style="padding-top: 3em;">
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-8 col-md-8">
-                <h3 class="mb-30">Choose Preference</h3>
+                <h3 class="mb-30">School Registration</h3>
+
                 <form method="POST">
                     {% csrf_token %}
                     <div class="mt-10">
                         <input type="text" name="name" placeholder="School Name" onfocus="this.placeholder = ''"
                             onblur="this.placeholder = 'School Name'" required class="single-input">
+                    </div>
+
+                    <div class="mt-10">
+                        <input type="text" name="phone_number" placeholder="Phone No."
+                            onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Phone No.'" required class="single-input">
                     </div>
 
                     <div class="mt-10"><small>optional</small></div>
@@ -26,11 +33,6 @@
                         </div>
                         <button type="button" class="genric-btn primary file-upload-browse"
                             style="line-height: 35px;">upload</button>
-                    </div>
-                    <div class="mt-10">
-                        <textarea name="description" id="id_description" class="single-textarea"
-                            placeholder="About School" onfocus="this.placeholder = ''"
-                            onblur="this.placeholder = 'Message'" required></textarea>
                     </div>
                     <div class="input-group-icon mt-10">
                         <button type="submit" class="genric-btn primary circle col-sm-12 col-lg-2">Next</button>

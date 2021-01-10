@@ -6,17 +6,22 @@
     <div class="container" style="padding-top: 3em;">
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-8 col-md-8">
-                <h3 class="mb-30">Tell Us About Your School</h3>
-                <small>This will be updated to your website</small>
+                <h3 class="mb-30">Create your web domain</h3>
+                <small>This will take over 12 Hours or less to make website domain</small>
                 <form method="POST">
                     {% csrf_token %}
-                    <div class="mt-10">
-                        <textarea name="description" id="id_description" class="single-textarea"
-                            placeholder="About School" onfocus="this.placeholder = ''"
-                            onblur="this.placeholder = 'Message'" required></textarea>
+                    <div class="row mt-10">
+                        <div class="col-lg-6 col-md-6">
+                            <input type="text" name="slug" placeholder="Domain" onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = 'Domain  ( pls it\'s required ).'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10 ml-10">
+                            <h4>.studyfoxx.com</h4>
+                        </div>
                     </div>
                     <div class="input-group-icon mt-10">
-                        <button type="submit" class="genric-btn primary circle col-sm-12 col-lg-2">Save</button>
+                        <button type="submit" class="genric-btn primary circle col-sm-12 col-lg-2">Start</button>
                     </div>
                 </form>
             </div>
