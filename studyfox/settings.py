@@ -102,7 +102,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'studydata',
+            'NAME': 'studybox',
             'USER': 'metalcode',
             'PASSWORD': 'daddy,44',
             'HOST': 'localhost',

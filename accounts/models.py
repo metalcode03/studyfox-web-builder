@@ -163,9 +163,9 @@ class Profile(models.Model):
         default=GENDER[0],
         blank=True,
     )
-    phone_number = models.CharField(max_length=22, blank=True)
+    phone_number = models.CharField(max_length=22, blank=True, null=True)
     address = models.CharField(max_length=230, blank=True)
-    created = models.DateTimeField(auto_now_add=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     country = models.CharField(max_length=200, choices=COUNTRY, blank=True)
     state = models.CharField(max_length=200, choices=STATE, blank=True)
 
