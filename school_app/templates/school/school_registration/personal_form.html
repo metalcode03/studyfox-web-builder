@@ -1,0 +1,171 @@
+{% extends "bases/basic.html" %}
+{% load static %}
+
+{% block mainbody %}
+<section class="top-category-widget-area pt-90 pb-100" style="height: 70em;">
+    <div class="container" style="padding-top: 3em;">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-8 col-md-8">
+                <h3 class="mb-30">Add Personal Information</h3>
+                <!-- <small>This will take over 12 Hours or less to apply website domain</small> -->
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mt-10">
+                        <input type="text" name="first_name" maxlength="40" id="id_first_name" placeholder="First Name" onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'First Name'" required class="single-input">
+                    </div>
+                    <div class="mt-10">
+                        <input type="text" name="last_name" maxlength="40" id="id_last_name" placeholder="Last Name" onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Last Name'" required class="single-input">
+                    </div>
+                    <div class="mt-10">
+                        <input type="text" name="other_name" maxlength="40" id="id_other_name" placeholder="Other Name" onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Other Name'" required class="single-input">
+                    </div>
+                    <div class="input-group-icon mt-10">
+                        <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
+                        <div class="form-select" id="default-select">
+                            <select name="gender" id="id_gender">
+                                <option value="">Gender</option>
+
+                                <option value="Male">Male</option>
+
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <input type="text" name="address" maxlength="230" id="id_address" placeholder="Address" onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Address'" required class="single-input">
+                    </div>
+                    <div class="input-group-icon mt-10">
+                        <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
+                        <div class="form-select" id="default-select">
+                            <select name="state" id="id_state">
+                                <option value="">Choose Country</option>
+
+                                <option value="Nigeria" selected>Nigeria</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-group-icon mt-10">
+                        <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
+                        <div class="form-select" id="default-select">
+                            <select name="state" id="id_state">
+                                <option value="">Choose State</option>
+
+                                <option value="Abia">Abia</option>
+
+                                <option value="Adamawa">Adamawa</option>
+
+                                <option value="Anambra">Anambra</option>
+
+                                <option value="Akwa Ibom">Akwa Ibom</option>
+
+                                <option value="Bauchi">Bauchi</option>
+
+                                <option value="Bayelsa">Bayelsa</option>
+
+                                <option value="Benue">Benue</option>
+
+                                <option value="Borno">Borno</option>
+
+                                <option value="Cross River">Cross River</option>
+
+                                <option value="Delta">Delta</option>
+
+                                <option value="Ebonyi">Ebonyi</option>
+
+                                <option value="Enugu">Enugu</option>
+
+                                <option value="Edo">Edo</option>
+
+                                <option value="Ekiti">Ekiti</option>
+
+                                <option value="FCT - Abuja">FCT - Abuja</option>
+
+                                <!-- <option value="Gombe">Gombe</option> -->
+
+                                <option value="Imo">Imo</option>
+
+                                <!-- <option value="Jigawa">Jigawa</option> -->
+
+                                <option value="Kaduna">Kaduna</option>
+
+                                <option value="Kano">Kano</option>
+
+                                <!-- <option value="Katsina">Katsina</option> -->
+
+                                <option value="Kebbi">Kebbi</option>
+
+                                <option value="Kogi">Kogi</option>
+
+                                <!-- <option value="Kwara">Kwara</option> -->
+
+                                <option value="Lagos" selected>Lagos</option>
+
+                                <!-- <option value="Nasarawa">Nasarawa</option> -->
+
+                                <option value="Niger">Niger</option>
+
+                                <option value="Ogun">Ogun</option>
+
+                                <option value="Ondo">Ondo</option>
+
+                                <option value="Osun">Osun</option>
+
+                                <option value="Oyo">Oyo</option>
+
+                                <!-- <option value="Plateau">Plateau</option> -->
+
+                                <option value="Rivers">Rivers</option>
+
+                                <!-- <option value="Sokoto">Sokoto</option> -->
+
+                                <!-- <option value="Taraba">Taraba</option> -->
+
+                                <option value="Yobe">Yobe</option>
+
+                                <option value="Zamfara">Zamfara</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <div class="switch-wrap d-flex justify-content-between">
+                            <p>Are you an admin</p>
+                            <div class="primary-switch">
+                                <input type="checkbox" id="default-switch" name="are_you_admin" required >
+                                <label for="default-switch"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group-icon mt-10">
+                        <button type="submit" class="genric-btn primary circle col-sm-12 col-lg-2">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock mainbody %}
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{profile_form}}
+        <button type="submit">submit</button>
+    </form>
+</body>
+
+</html> -->

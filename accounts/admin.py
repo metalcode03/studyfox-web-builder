@@ -1,5 +1,5 @@
 from .models import User, Profile
-from django.contrib import admin
+from django.contrib import admin, messages
 from django.conf import settings
 from django.contrib.admin.options import IS_POPUP_VAR, csrf_protect_m
 from django.contrib.admin.utils import unquote
@@ -28,7 +28,7 @@ class UserAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {'fields': ('username', 'email', 'password')}),
         (_('Permissions'), {
-            'fields': ('active', 'staff', 'admin'),
+            'fields': ('active', 'staff', 'admin', 'school_owner', 'student', 'teacher', 'guardian',),
         }),
     )
     add_fieldsets = (
@@ -40,7 +40,7 @@ class UserAdmin(admin.ModelAdmin):
     form = UserChangeForm
     add_form = UserCreationForm
     change_password_form = AdminPasswordChangeForm
-    list_display = ('username', 'email', 'active', 'staff')
+    list_display = ('username', 'email', 'active', 'staff', 'school_owner')
     list_filter = ('staff', 'admin', 'active')
     search_fields = ('username', 'email')
     ordering = ('username',)

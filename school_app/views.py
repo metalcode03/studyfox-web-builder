@@ -10,6 +10,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.utils.safestring import mark_safe
 
+
 # Installed apps modules
 from main.utils import Calendar
 from main.models import Event
