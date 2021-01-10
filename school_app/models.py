@@ -17,7 +17,7 @@ class School(models.Model):
     registeration_date = models.DateTimeField(auto_now_add=True, blank=True)
     created_on = models.DateField(blank=True, null=True)
     on_trial = models.BooleanField(default=True)
-    phone_number = models.CharField(max_length=20)
+    phone_number = models.CharField(max_length=20, blank=True, null=True)
     template_path = models.CharField(
         max_length=30, blank=True, default='default')
     slug = models.SlugField(blank=True)
