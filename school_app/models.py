@@ -184,7 +184,7 @@ class SchoolTeacher(models.Model):
 
 class SchoolInformation(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
-    mail = models.EmailField(unique=True, blank=True)
+    mail = models.EmailField(blank=True)
     phone_number = models.IntegerField(blank=True, null=True)
 
     class Meta:
