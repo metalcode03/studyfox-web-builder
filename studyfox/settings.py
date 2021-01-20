@@ -27,7 +27,7 @@ SECRET_KEY = 'zru*pax8ubj8x*$)ss(g5b=(f=i4)l^_pyz^eh4_3g#$hwt+^#'
 DEBUG = False
 # DEBUG = True
 if DEBUG:
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['studyfoxx.com']
 else:
     ALLOWED_HOSTS = ['studyfoxx.com', '192.81.218.91', '*']
 
