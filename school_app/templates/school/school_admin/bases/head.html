@@ -1,6 +1,6 @@
 {% load static %}
 
-<head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,12 +12,17 @@
     <link rel="stylesheet" href="{%static 'assets/vendors/mdi/css/materialdesignicons.min.css'%}">
     <link rel="stylesheet" href="{%static 'assets/vendors/css/vendor.bundle.base.css'%}">
     <link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+
     <!-- endinject -->
     <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="{% static 'assets/vendors/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/popups/styles.css' %}">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
+       <script src="{% static 'assets/js/file-upload.js' %}"></script>
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="assets/images/favicon.png" />
@@ -54,7 +59,60 @@
             font-family: "Poppins", sans-serif !important;
         }
 
+        .responsive-avgrund{
+            position: fixed;
+            width: 450px !important;
+            margin-top: -200px !important;
+        }
 
+        @media (max-width: 760px) {
+            .responsive-avgrund{
+                margin-left: -250px !important;
+                width: 500px !important;
+            }
+        } 
+        @media (max-width: 605px) {
+            .responsive-avgrund{
+                margin-left: -220px !important;
+                width: 450px !important;
+            }
+        }
+        @media (max-width: 540px) {
+            .responsive-avgrund{
+                margin-left: -210px !important;
+                width: 420px !important;
+            }
+        }
+        @media (max-width: 493px) {
+            .responsive-avgrund{
+                margin-left: -200px !important;
+                width: 400px !important;
+            }
+        }
+        @media (max-width: 464px) {
+            .responsive-avgrund{
+                margin-left: -180px !important;
+                width: 360px !important;
+            }
+        }
+        @media (max-width: 420px) {
+            .responsive-avgrund{
+                margin-left: -160px !important;
+                width: 320px !important;
+            }
+        }
+        @media (max-width: 380px) {
+            .responsive-avgrund{
+                margin-left: -140px !important;
+                width: 280px !important;
+            }
+        }
+        @media (max-width: 330px) {
+            .responsive-avgrund{
+                margin-left: -120px !important;
+                width: 240px !important;
+            }
+        }
         /* Chart.js */
         @keyframes chartjs-render-animation {
             from {
@@ -101,4 +159,3 @@
             top: 0
         }
     </style>
-</head>

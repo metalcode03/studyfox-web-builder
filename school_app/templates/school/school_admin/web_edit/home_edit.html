@@ -1,0 +1,173 @@
+{% extends 'school/school_admin/bases/base.html' %}
+{% load static %}
+
+{% block avgrund %}
+class="avgrund-ready"
+{% endblock avgrund %}
+
+{% block mainbody %}
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Home Page Slide</h4>
+                <div class="owl-carousel owl-theme full-width">
+                    <div class="item">
+                        <div class="card text-white">
+                            <img class="card-img" src="{% static 'assets/images/carousel/banner_4.jpg' %}"
+                                alt="Card image">
+                            <div class="card-img-overlay d-flex">
+                                <div class="mt-auto text-center w-100">
+                                    <h3>Third Slide Label</h3>
+                                    <h6 class="card-text mb-4 font-weight-normal">Nulla vitae elit libero, a
+                                        pharetra augue mollis interdum.</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card text-white">
+                            <img class="card-img" src="{% static 'assets/images/carousel/banner_5.jpg' %}"
+                                alt="Card image">
+                            <div class="card-img-overlay d-flex">
+                                <div class="mt-auto text-center w-100">
+                                    <h3>Third Slide Label</h3>
+                                    <h6 class="card-text mb-4 font-weight-normal">Nulla vitae elit libero, a
+                                        pharetra augue mollis interdum.</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card text-white">
+                            <img class="card-img" src="{% static 'assets/images/carousel/banner_6.jpg' %}"
+                                alt="Card image">
+                            <div class="card-img-overlay d-flex">
+                                <div class="mt-auto text-center w-100">
+                                    <h3>Third Slide Label</h3>
+                                    <h6 class="card-text mb-4 font-weight-normal">Nulla vitae elit libero, a
+                                        pharetra augue mollis interdum.</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-gradient-primary mr-2 mt-2 mb-2" style="background:linear-gradient(100deg, #8490ff 10%, #62bdfc 100%); border:1px solid
+                            #8490ff; border-radius: 25px;" id="edit_home">Add View</button>
+                <!-- <button class="btn btn-gradient-primary mr-4 mt-2 mb-2" id="add_hero_image"
+                            style="background:linear-gradient(100deg, #8490ff 10%, #62bdfc 100%); border-radius: 25px;">Add
+                            Image</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-8 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Personal</h4>
+                <div class="col-lg-12">
+                    <div class="row ">
+                        <div class="mr-5">
+                            <h3>Add Title of Personal here</h3>
+                            <p>Add text here</p>
+                        </div>
+                        <img class="card-img" style="width: 200px;"
+                            src="{% static 'assets/images/carousel/banner_6.jpg' %}" alt="Card image">
+                    </div>
+                </div>
+                <button class="btn btn-gradient-primary mr-4 mt-6 mb-2" id="edit_personal"
+                    style="background:linear-gradient(100deg, #8490ff 10%, #62bdfc 100%); border-radius: 25px;">Edit
+                    Personal</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-white">Single Features</h4>
+                <div class="add-items d-flex">
+                    <input type="text" class="form-control todo-list-input" style="border-radius: 25px;" placeholder="What do you need to do today?">
+                    <button class="add btn btn-gradient-primary font-weight-bold todo-list-add-btn"
+                    style="background:linear-gradient(100deg, #8490ff 10%, #62bdfc 100%); border-radius: 25px;"
+                        id="add-task">Add</button>
+                </div>
+                <div class="list-wrapper">
+                    <ul class="d-flex flex-column-reverse todo-list todo-list-custom">
+
+                        <li>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="checkbox" type="checkbox"> Quality Education </label>
+                            </div>
+                            <i class="remove mdi mdi-close-circle-outline"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">About School</h4>
+                <div class="col-lg-12">
+                    <div class="row justify-content-between">
+                        <div class="mr-12">
+                            <h2>Add Title of About here</h2>
+                            <p>Add text here</p>
+                        </div>
+                        <div class="ml-5">
+                            <img class="card-img" style="width: 300px;"
+                                src="{% static 'assets/images/carousel/banner_6.jpg' %}"
+                                alt="Card image">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-gradient-primary mr-4 mt-6 mb-2" id="edit_about"
+                    style="background:linear-gradient(100deg, #8490ff 10%, #62bdfc 100%); border-radius: 25px;">Edit
+                    About</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock mainbody %}
+
+{% block scripts %}
+<script src="{% static 'assets/vendors/popups/scripts.js' %}"></script>
+<script src="{% static 'assets/vendors/popups/sweetalert.min.js' %}"></script>
+<script src="{% static 'assets/vendors/popups/jquery.avgrund.min.js' %}"></script>
+<script src="{% static 'assets/vendors/popups/alerts.js' %}"></script>
+<script src="{% static 'assets/vendors/popups/avgrund.js' %}"></script>
+<div class="avgrund-overlay "></div>
+<div class="swal-overlay" tabindex="-1">
+    <div class="swal-modal" role="dialog" aria-modal="true">
+        <div class="swal-icon swal-icon--success">
+            <span class="swal-icon--success__line swal-icon--success__line--long"></span>
+            <span class="swal-icon--success__line swal-icon--success__line--tip"></span>
+
+            <div class="swal-icon--success__ring"></div>
+            <div class="swal-icon--success__hide-corners"></div>
+        </div>
+        <div class="swal-title" style="">Congratulations!</div>
+        <div class="swal-text" style="">You entered the correct answer</div>
+        <div class="swal-footer">
+            <div class="swal-button-container">
+
+                <button class="swal-button swal-button--confirm btn btn-primary">Continue</button>
+
+                <div class="swal-button__loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock scripts %}
