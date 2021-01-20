@@ -1,10 +1,16 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+<head>
 {% include 'school/school_admin/bases/head.html' %}
+{% block head %}
+  
+{% endblock head %}
+</head>
+<body {% block avgrund %} {% endblock avgrund %}>
+           
+    <div class="container-scroller"> 
 
-<body>
-    <div class="container-scroller">
         {% include 'school/school_admin/bases/navbar.html' %}
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
@@ -29,8 +35,13 @@
         </div>
         <!-- page-body-wrapper ends -->
     </div>
+
     <!-- container-scroller -->
     {% include "school/school_admin/bases/scripts.html" %}
+    {% block scripts %}
+      
+    {% endblock scripts %}
+
 </body>
 
 </html>

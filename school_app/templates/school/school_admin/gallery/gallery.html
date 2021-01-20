@@ -1,0 +1,87 @@
+{% extends 'school/school_admin/bases/base.html' %}
+{% load static %}
+
+{% block avgrund %}
+class="avgrund-ready"
+{% endblock avgrund %}
+
+{% block mainbody %}
+<div class="row grid-margin">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Gallery</h4>
+                <p class="card-text"> Click on any image to open in lightbox gallery </p>
+                <div id="lightgallery" class="row lightGallery">
+                    <a href="{% static 'assets/images/gallery/1.jpg' %}"
+                        class="image-tile"><img src="{% static 'assets/images/gallery/1.jpg' %}"
+                            alt="image small"></a>
+                    <a href="{% static 'assets/images/gallery/2.jpg' %}"
+                        class="image-tile"><img src="{% static 'assets/images/gallery/2.jpg' %}"
+                            alt="image small"></a>
+                    <a href="{% static 'assets/images/gallery/3.jpg' %}"
+                        class="image-tile"><img src="{% static 'assets/images/gallery/3.jpg' %}"
+                            alt="image small"></a>
+                    <a href="{% static 'assets/images/gallery/4.jpg' %}"
+                        class="image-tile"><img src="{% static 'assets/images/gallery/4.jpg' %}"
+                            alt="image small"></a>
+                    <a href="assets/images/gallery/5.jpg{% static '' %}"
+                        class="image-tile"><img src="{% static 'assets/images/gallery/5.jpg' %}"
+                            alt="image small"></a>
+                    <a href="{% static 'assets/images/gallery/6.jpg' %}"
+                        class="image-tile"><img src="{% static 'assets/images/gallery/6.jpg' %}"
+                            alt="image small"></a>
+                    <a href="{% static 'assets/images/gallery/7.jpg' %}"
+                        class="image-tile"><img src="{% static 'assets/images/gallery/7.jpg' %}"
+                            alt="image small"></a>
+                    <a href="{% static 'assets/images/gallery/8.jpg' %}"
+                        class="image-tile"><img src="{% static 'assets/images/gallery/8.jpg' %}"
+                            alt="image small"></a>
+                </div>
+                <button class="btn btn-gradient-primary mr-4 mt-2 mb-2" id="add_hero_image"
+                    style="background:linear-gradient(100deg, #8490ff 10%, #62bdfc 100%); border-radius: 25px;">Add
+                    Image</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock mainbody %}
+
+
+
+
+
+{% block scripts %}
+<script src="{% static 'assets/vendors/popups/scripts.js' %}"></script>
+<script src="{% static 'assets/vendors/popups/sweetalert.min.js' %}"></script>
+<script src="{% static 'assets/vendors/popups/jquery.avgrund.min.js' %}"></script>
+<script src="{% static 'assets/vendors/popups/alerts.js' %}"></script>
+<script src="{% static 'assets/vendors/popups/avgrund.js' %}"></script>
+<div class="avgrund-overlay "></div>
+<div class="swal-overlay" tabindex="-1">
+    <div class="swal-modal" role="dialog" aria-modal="true">
+        <div class="swal-icon swal-icon--success">
+            <span class="swal-icon--success__line swal-icon--success__line--long"></span>
+            <span class="swal-icon--success__line swal-icon--success__line--tip"></span>
+
+            <div class="swal-icon--success__ring"></div>
+            <div class="swal-icon--success__hide-corners"></div>
+        </div>
+        <div class="swal-title" style="">Congratulations!</div>
+        <div class="swal-text" style="">You entered the correct answer</div>
+        <div class="swal-footer">
+            <div class="swal-button-container">
+
+                <button class="swal-button swal-button--confirm btn btn-primary">Continue</button>
+
+                <div class="swal-button__loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock scripts %}

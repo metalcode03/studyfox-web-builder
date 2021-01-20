@@ -105,9 +105,22 @@ def success_message(request):
     return render(request, 'school/school_registration/congrats_msg.html', context)
 
 
+
+
 def course(request):
     return render(request, 'school/school_admin/course/course.html')
 
 
 def class_detail(request):
     return render(request, 'school/school_admin/course/class_detail.html')
+
+def testing12(request):
+    return render(request, 'school/school_admin/web_edit/home_edit.html')
+
+
+def testing13(request):
+    return render(request, 'school/school_admin/gallery/gallery.html')
+
+
+def testing14(request):
+    return render(request, 'school/school_admin/forms/register_students.html')

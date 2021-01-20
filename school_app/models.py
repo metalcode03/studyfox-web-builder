@@ -48,7 +48,15 @@ class SchoolHomePage(models.Model):
 
     def __str__(self):
         return self.hero_title
+    
 
+class ImageHomeView(models.Model):
+    school_home = models.ForeignKey(SchoolHomePage, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='school/hero_image/hero', blank=True, null=True)
+
+    def __str__(self):
+        return self.school_home.hero_title
+    
 
 class SchoolAchievement(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
@@ -222,7 +230,7 @@ def post_save_receiver(instance, created, sender, **kwargs):
         sc = SchoolTeacher.objects.create(school=instance)
         ho = SchoolTestimonial.objects.create(school=instance)
         ot = Personals.objects.create(school=instance)
-        ab = AboutSchool.objects.create(schoool=instance)
+        ab = AboutSchool.objects.create(school=instance)
 
 
 post_save.connect(post_save_receiver, sender=School)
